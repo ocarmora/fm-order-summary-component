@@ -14,6 +14,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url('/images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+
+    @media only screen and (min-width: 450px) {
+        background-image: url('/images/pattern-background-desktop.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
 }
 
 .card {
@@ -24,6 +33,11 @@ body {
     background-color: white;
     border-radius: 20px;
 
+    @media only screen and (min-width: 450px) {
+        width: 445px;
+        height: 700px;
+    }    
+
     &-header img {
         border-radius: 20px 20px 0 0;
         width: 100%;
@@ -32,13 +46,18 @@ body {
     &-body {
         display: flex;
         flex-direction: column;
-        padding: 25px;
+        padding: 20px 25px;
         text-align: center;
         height: 100%;
         justify-content: space-between;
 
+        @media only screen and (min-width: 450px) {
+            padding: 40px 50px;
+        }    
+
         &-title {
             color: $color-dark-blue;
+            font-weight: 900;
         }
 
         &-description {
@@ -54,13 +73,22 @@ body {
             padding: 15px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+
+            @media only screen and (min-width: 450px) {
+                padding: 20px;
+            }    
 
             &-detail {
                 display: flex;
                 flex-direction: column;
                 align-items: start;
                 flex-wrap: wrap;
-                // margin-left: 20px;
+                margin-left: -20px;
+
+                @media only screen and (min-width: 450px) {
+                    margin-left: -90px;
+                }    
 
                 &-name {
                     font-weight: 900;
@@ -78,6 +106,10 @@ body {
                 font-size: 14px;
                 font-weight: 700;
                 color: $color-bright-blue;
+
+                &:hover {
+                    color: $link-hover-primary;
+                }
             }
 
         }
@@ -90,12 +122,20 @@ body {
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 15px 15px rgba($color-bright-blue, .3);
+
+            &:hover {
+                background-color: $link-hover-primary
+            }
         }
 
         .btn-cancel {
             font-weight: 900;
             text-decoration: none;
             color: $color-desaturated-blue;
+
+            &:hover {
+                color: $color-dark-blue;
+            }
         }
     }
 
