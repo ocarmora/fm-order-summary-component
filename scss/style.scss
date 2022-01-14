@@ -1,0 +1,104 @@
+@import '_colors';
+@import '_typography';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $color-pale-blue;
+    font-family: $font-primary;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 325px;
+    height: 565px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+
+    &-header img {
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+        height: 100%;
+        justify-content: space-between;
+
+        &-title {
+            color: $color-dark-blue;
+        }
+
+        &-description {
+            font-size: $font-size-md;
+            line-height: 1.5;
+            color: $color-desaturated-blue;
+            font-weight: 500;
+        }
+
+        .plan {
+            background-color: $color-very-pale-blue; 
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+
+            &-detail {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                flex-wrap: wrap;
+                // margin-left: 20px;
+
+                &-name {
+                    font-weight: 900;
+                    color: $color-dark-blue;
+                    font-size: 15px;
+                }
+
+                &-price {
+                    color: $color-desaturated-blue;
+                    font-size: 14px;
+                }
+            }
+
+            &-change-link {
+                font-size: 14px;
+                font-weight: 700;
+                color: $color-bright-blue;
+            }
+
+        }
+
+        .btn-proceed {
+            background-color: $color-bright-blue;
+            color: $color-very-pale-blue;
+            font-weight: 900;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 15px 15px rgba($color-bright-blue, .3);
+        }
+
+        .btn-cancel {
+            font-weight: 900;
+            text-decoration: none;
+            color: $color-desaturated-blue;
+        }
+    }
+
+
+
+}
