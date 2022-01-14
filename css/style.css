@@ -8,7 +8,7 @@ body {
   background-color: #e0e8ff;
   font-family: "Red Hat Display", sans-serif;
   display: flex;
-  height: 90vh;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
